@@ -1,0 +1,31 @@
+
+
+.page-A4 {
+
+  background-color: #fff;
+  display: block;
+  margin: 0 auto 0 auto; /* 3rem auto 3rem auto */
+  position: relative;
+  box-shadow: 0 0 0.5cm rgb(0, 0, 0, 0.1);
+
+
+  /* new jsPDF('landscape', 'pt', 'a4')  width: 21.0cm; height: 29.7cm;
+  //portrait
+  width: 22.3cm;//22.3cm; //21cm;    1066px ??
+  height: 29.7cm;////29.7cm; //29.7cm;  585px;??
+  */
+
+  width: 600px;
+  height: 585px;
+  /*
+  landscape
+  width: 600px;//29.7cm;//22.3cm; //21cm;    1066px ??
+  height: 21cm;////29.7cm; //21cm;  585px;?? 21.0cm
+  */
+
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+
+  scrollbar-width: thin;
+
+}

@@ -1,0 +1,30 @@
+<div style="height: 50px;">
+  spaceOfElementAndPage = 50
+  <button id="button" (click)="button()" [disabled]="enableAction" style="width: 200px; padding: 16px">
+    Gerar PDF
+  </button>
+</div>
+<div *ngIf="enableAction">
+  <app-loading></app-loading>
+</div>
+<div id="report" class="page-A4" #report >
+<table style="width: 600px;" appScrollNearEnd (nearEnd)="onNearEndScroll()" mat-table [dataSource]="dataSourceSignal()" [trackBy]="identity">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Id</th>
+    <td mat-cell *matCellDef="let row" style="color: black; font-size: 16px;">
+     {{ row.id }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef>First Name</th>
+    <td mat-cell *matCellDef="let row" style="color: black; font-size: 16px;">
+      {{ row.firstName }}
+     </td>
+   </ng-container>
+
+   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+</div>
